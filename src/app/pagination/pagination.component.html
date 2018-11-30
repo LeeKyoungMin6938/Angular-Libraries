@@ -1,0 +1,6 @@
+<div class='showPagenation'>
+  <p *ngFor = 'let arr of pagenateArr | paginate : { itemsPerPage : 6, currentPage : join };'>{{arr.name}} / {{arr.number}}</p>
+</div>
+<div class="pagination"> 
+  <pagination-controls previousLabel="이전" nextLabel="다음" (pageChange)="join = $event"></pagination-controls>
+</div>
